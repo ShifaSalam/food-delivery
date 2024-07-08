@@ -1,0 +1,29 @@
+
+.main-container {
+    background-image: url('https://wallpapertag.com/wallpaper/full/4/d/7/317105-gorgerous-food-background-2990x1918-for-mobile-hd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card{
+    background-image: url('https://progressive.kelbymediagroup.com/kelbyone/blog/uploads/2015/01/young_feature_food_008.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:1rem;
+    background-color: rgba(240, 248, 255, 0.357);
+    width: 450px;
+}
+.logo{
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+.card-body{
+    background: rgba(255, 255, 255, 0.517);
+    border-radius: 1rem;
+}

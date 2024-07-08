@@ -1,0 +1,17 @@
+.main-container, .login-side {
+    background-image: url('https://wallpapertag.com/wallpaper/full/4/d/7/317105-gorgerous-food-background-2990x1918-for-mobile-hd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:0 1rem 1rem 0;
+}
+.logo{
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}

@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+<div class="row">
+    <div class="col-8 m-4">
+        <div class="border pe-5">
+            <table class="table table-borderless mx-4">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://wallpaperaccess.com/full/767048.jpg" class="img" alt="">
+                        </td>
+                        <td class="pt-5 d-flex flex-column justify-content-center pe- ps-5">
+                            <h2 class="my-0">Pizza Pepperoni</h2>
+                            <span>Price</span>
+                        </td>
+                        <td class="pt-5 ps-3 pe-0">
+                            <mat-form-field class="count">
+                                <mat-label>Count</mat-label>
+                                <select matNativeControl>
+                                    <option class="text-center" value="1">1</option>
+                                    <option class="text-center" value="2">2</option>
+                                    <option class="text-center" value="3">3</option>
+                                    <option class="text-center" value="4">4</option>
+                                </select>
+                            </mat-form-field>
+                        </td>
+                        <td class="pt-5 px-4">
+                            <h3>Total Price</h3>
+                        </td>
+                        <td class="pt-5 ps-s ms-4">
+                            <button class="remove btn">Remove</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img">
+                            <img src="https://wallpaperaccess.com/full/767048.jpg" class="img" alt="">
+                        </td>
+                        <td class="pt-5 d-flex flex-column justify-content-center pe- ps-5">
+                            <h2 class="my-0">Pizza Pepperoni</h2>
+                            <span>Price</span>
+                        </td>
+                        <td class="pt-5 ps-3 pe-0">
+                            <mat-form-field class="count">
+                                <mat-label>Count</mat-label>
+                                <select matNativeControl>
+                                    <option class="text-center" value="1">1</option>
+                                    <option class="text-center" value="2">2</option>
+                                    <option class="text-center" value="3">3</option>
+                                    <option class="text-center" value="4">4</option>
+                                </select>
+                            </mat-form-field>
+                        </td>
+                        <td class="pt-5 px-4">
+                            <h3>Total Price</h3>
+                        </td>
+                        <td class="pt-5 ps-s ms-4">
+                            <button class="remove btn">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between my-3">
+            <button class="btn btn-outline-danger" >Empty Cart</button>
+            <a routerLink="/items" class="btn btn-outline-info">Shop More...</a>
+        </div>
+    </div>
+    <div class="col-3 my-4 ms-3 border">
+        <div class="mt-5 mx-3 border shadow p-5">
+            <div class="h4">
+                Total Amount : <span class="text-warning">{{cartTotal|currency}}</span>
+            </div>
+            <p *ngIf="!couponStatus">Click for Offers.. <span class="ms-3 btn btn-link" (click)="offerClick()"><i
+                        class="fa-solid fa-tag"></i>Offers</span></p>
+            <div class="my-2" *ngIf="couponStatus">
+                <ng-container *ngIf="cartTotal>=100 &&cartTotal<250 &&!couponCheckStatus">
+                <img src="https://img.freepik.com/premium-vector/coupon-mockup-with-5-percent-off-discount-voucher-gift-coupon-coupon-promotion-sale-vector_662353-255.jpg"
+                    height="120px" alt="5%" (click)="discount5()">
+                </ng-container>
+                <ng-container *ngIf="cartTotal>=250 &&cartTotal<500 && !couponCheckStatus">
+                <img src="https://d2kh7o38xye1vj.cloudfront.net/wp-content/uploads/2024/01/Percentage-Coupons.webp"
+                    alt="20%" height="120px" (click)="discount20()">
+                </ng-container>
+                <ng-container *ngIf="cartTotal>=500 && !couponCheckStatus">
+                <img src="https://www.shutterstock.com/image-vector/50-coupon-promotion-sale-website-260nw-2039676860.jpg"
+                    alt="50%" height="120px" (click)="discount50()">
+                </ng-container>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-success" routerLink="/order">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

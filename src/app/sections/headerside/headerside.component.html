@@ -1,0 +1,48 @@
+<!-- <app-sidebar></app-sidebar> -->
+<nav class="navbar" style="background-color: cadetblue;">
+    <div class="container-fluid">
+        <span class="logo ms-4 px-2 my-0">
+            <img src="https://www.pikpng.com/pngl/b/429-4290407_healthy-corner-healthy-corner-logo-food-corner-png.png"
+                width="110px" alt="img" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+        </span>
+        <div class="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+            <div>
+                <span class="ms-5 ps-3">
+                    <img src="https://www.pikpng.com/pngl/b/429-4290407_healthy-corner-healthy-corner-logo-food-corner-png.png"
+                        width="110px" alt="img" class="pt-3">
+                </span>
+                <h3 class="row text-center my-1"><i>Explore Our Healthy Menu!</i></h3>
+                <h2 class="p-3 mb-0 all"><i class="fas fa-utensils me-2"></i> All</h2>
+                <h2 class="p-3 mb-0"><i class="fas fa-hamburger me-2"></i> Fastfood</h2>
+                <h2 class="p-3 mb-0"><i class="fas fa-bowl-rice me-2"></i> Lunch</h2>
+                <h2 class="p-3 mb-0"><i class="fas fa-mug-hot me-2"></i> Soups</h2>
+                <h2 class="p-3 mb-0"><i class="fas fa-ice-cream me-2"></i> Desserts</h2>
+                <h2 class="p-3 mb-0"><i class="fa-solid fa-martini-glass-citrus me-2"></i> Drinks</h2>
+            </div>
+        </div>
+
+        <div class="d-flex">
+
+            <a routerLink="/cart" class="btn btn-outline-dark me-3">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+                <span class="badge bg-dark ms-2"></span>
+            </a>
+            <a routerLink="/log" class="btn btn-outline-dark me-3">
+                <i class="fa-regular fa-user"></i>
+                Login
+            </a>
+            <span>
+                <i class="fa-regular fa-user"></i>
+
+                <button class="btn btn-outline-danger">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </button>
+            </span>
+
+        </div>
+    </div>
+</nav>

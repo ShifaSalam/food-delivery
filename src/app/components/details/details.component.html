@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-6 px-4">
+            <img src="https://wallpaperaccess.com/full/767048.jpg" alt="">
+        </div>
+        <div class="col-5 mt-5 pt-5">
+            <h1 style="font-size: xx-large;">Pizza pepperoni</h1>
+            <div class="ps-2">
+                <i class="fa-solid fa-xl fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-xl fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-xl fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-xl fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-xl fa-star" style="color: #FFD43B;"></i>
+            </div>
+            <h2>Time to cook-about <b>20-30</b> mins</h2>
+            <h1>Price:400</h1>
+            <div class="d-flex justify-content-center mt-5 pt-5">
+                <h1 class="btn btn-success mx-5 mt-5" routerLink="/cart">Add to Cart</h1>
+            </div>
+        </div>
+        <div class="col-1">
+            <span class="btn" (click)="toggleHeart()">
+                <div *ngIf="!HeartSelect;else elsedata" class="heart">
+                    <i class="fa-regular fa-2xl fa-heart" style="color: #e60063;"></i>
+                </div>
+                <ng-template #elsedata>
+                    <i class="fa-solid fa-2xl fa-heart" style="color: #e60063;"></i>
+                </ng-template>
+            </span>
+        </div>
+    </div>
+</div>
